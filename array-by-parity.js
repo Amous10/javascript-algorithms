@@ -1,8 +1,3 @@
-require('make-runnable');
-module.exports = { arraySort };
-
-// Use joylabs/onboarding-rust to work of your personal branch to solve the following problem.
-
 // Given an array A of non-negative integers, return an array consisting of all the even elements of A, followed by all the odd elements of A.
 
 // You may return any answer array that satisfies this condition.
@@ -19,5 +14,11 @@ module.exports = { arraySort };
 // 0 <= A[i] <= 5000
 
 function arraySort(arrays) {
-	return arrays;
+
+	var even = arrays.filter(x => x % 2 == 0);
+	var odd = arrays.filter(x => x % 2 != 0);
+	return even.concat(odd);
 }
+
+// Output: [2,4,3,1]
+console.log(arraySort([3, 1, 2, 4]));
