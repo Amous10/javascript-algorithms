@@ -8,11 +8,9 @@
 // 0 <= A[i] <= 5000
 
 function arraySort(arrays) {
-
 	var even = arrays.filter(x => x % 2 == 0);
 	var odd = arrays.filter(x => x % 2 != 0);
 	return even.concat(odd);
 }
 
 module.exports = arraySort;
-
